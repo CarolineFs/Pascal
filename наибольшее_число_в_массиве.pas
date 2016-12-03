@@ -6,7 +6,7 @@ begin
 i:=1;
 readln (a[i]);
 a[i]:=b;
-for i:=2 to 10 do begin
+for i:=2 to N do begin
 readln (a[i]);
 if a[i]>b then
 b:=a[i]; 

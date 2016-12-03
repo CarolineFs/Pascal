@@ -1,5 +1,5 @@
 program X;
-const N = 10;
+const N = 30;
 var a: array [1..N] of integer;
 i, p, s, sum: integer;
 begin

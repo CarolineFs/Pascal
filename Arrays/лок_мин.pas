@@ -2,7 +2,7 @@ program uno;
 const N = 6;
 var
 a: array [1..N] of integer;
-i, j, k: integer;
+i, k: integer;
 begin
 for i:=1 to N do begin
     write ('Введите элемент массива: ');

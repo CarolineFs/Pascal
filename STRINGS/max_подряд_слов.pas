@@ -17,10 +17,8 @@ i := 1;
 for j := 1 to length(s) do begin
     
     if (s[j] <> ' ') then word[i] := word[i] + s[j]
-    else if s[j] = ' ' then begin
+    else if s[j] = ' ' then 
         i := i + 1; 
-        continue;
-    end; 
 end;
 l := 0;
 for i_i := 1 to N do begin

@@ -52,6 +52,11 @@ begin
         begin
         writeln ('Вычисленное контрольное значение: ', R);
         writeln ('Контроль пройден');
+        end
+    else if (max_odd <> 0) and (max_even <> 0) and (max_even + max_odd <> R) then
+        begin
+        writeln ('Вычисленное контрольное значение: ', max_even + max_odd);
+        writeln ('Контроль не пройден');
         end;
 end. 
         

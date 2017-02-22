@@ -10,9 +10,6 @@ program roma;
     i, j, k, k_max, i_i, l: integer;
 begin
 readln (s);
-k := 0;
-for i := 1 to length(s) do
-    if s[i] = ' ' then k := k + 1;
 i := 1;
 for j := 1 to length(s) do begin
     

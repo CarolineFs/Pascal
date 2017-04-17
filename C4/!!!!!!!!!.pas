@@ -25,7 +25,8 @@ begin
         end;
     
     av := Trunc(N*0.2);
-    for i := 100 to 1 do 
+    i := 100;
+    while i <> 0 do 
       if score[i] >= av then 
         begin 
           writeln (i);
@@ -43,6 +44,7 @@ begin
                     break;
                   end;
               end;
+         i := i -1;
         end;     
                 
     end.

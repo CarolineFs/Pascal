@@ -37,7 +37,7 @@ begin
             k := 0;
             for j := 100 to 1 do
               begin
-                k := k + score[i];
+                k := k + score[j];
                 if k >= av then
                   begin
                     writeln(i);

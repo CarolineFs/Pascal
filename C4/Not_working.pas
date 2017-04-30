@@ -5,7 +5,7 @@ x, y, i, j, flag, N: integer;
 begin
   readln (N);
   for i:=1 to 99 do
-    for j:=1 to 100 do 
+    for j:=1 to 100 do
       a[i,j]:=0;
   for i:=1 to N do
   begin
@@ -19,21 +19,29 @@ begin
     a[x,y]:=a[x,y]+1;
   end;
   flag:=0;
+  N:=0;
   for i:=1 to 99 do
     begin
-      N:=0;
-      for j:=1 to 100 do
-        begin
-          if a[i,j]>N then N:=a[i,j];
-          if flag=0 then
-            begin
-              x:=i;
-              y:=j;
-            end;
-          flag:=flag+1;
-          if (N>2) and (flag>2) then writeln (i);
-          end;
+
+      for j:=100 downto 1 do
+
+          if (a[i,j]>0) then begin
+              if a[i,j]>2 then begin
+                  flag:=flag+1;
+                  if flag=1 then  begin
+                      x:=i; y:=j; end; end
+                  else begin
+                      if N=0 then begin
+                      write(x); N:=N+1; end;
+                      write (i, ' ');
+
+                      end;
+              break; end;
     end;
+
+
   if flag=0 then writeln('Нет таких школ.')
-  else if flag=1 then writeln(x, '\n', 'Наибольший балл = ', y);
-end. 
+  else if flag=1 then begin
+      writeln (x);
+      writeln('Наибольший балл = ', y); end;
+end.

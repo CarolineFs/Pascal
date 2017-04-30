@@ -25,10 +25,8 @@ begin
         end;
     
     av := Trunc(N*0.2);
-    i := 100;
-    j := 100;
-    while i <> 0 do 
-      if score[i] >= av then 
+    for i:= 100 downto 1 do
+      if (score[i] >= av) and (score[i]<>0)then 
         begin 
           writeln (i);
           break; 
@@ -36,17 +34,15 @@ begin
       else
         begin
             k := 0;
-            while j <> 0 do
+            for j:=100 downto 1 do
               begin
-                k := k + score[j];
-                if k >= av then
-                  begin
-                    writeln(i);
-                    break;
+                if (k+score[j]<=av) then
+                    k := k + score[j]
+                  else
+                    begin
+                      writeln(i);
+                      break; 
                   end;
-                j := j-1;
-              end;
-         i := i -1;
-        end;     
-                
+              end; break;    
+        end;        
     end.

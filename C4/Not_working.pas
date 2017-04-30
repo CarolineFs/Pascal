@@ -25,23 +25,34 @@ begin
 
       for j:=100 downto 1 do
 
-          if (a[i,j]>0) then begin
-              if a[i,j]>2 then begin
+          if (a[i,j]>0) then 
+            begin
+              if a[i,j]>2 then 
+                begin
                   flag:=flag+1;
-                  if flag=1 then  begin
-                      x:=i; y:=j; end; end
-                  else begin
-                      if N=0 then begin
-                      write(x); N:=N+1; end;
-                      write (i, ' ');
-
-                      end;
-              break; end;
+                  if flag=1 then  
+                    begin
+                      x:=i; 
+                      y:=j; 
+                    end; 
+                end
+              else 
+                begin
+                  if N=0 then 
+                    begin
+                      write(x); N:=N+1; 
+                    end;
+                  write (i, ' ');
+                end;
+              break; 
+            end;
     end;
 
 
   if flag=0 then writeln('Нет таких школ.')
-  else if flag=1 then begin
+  else if flag=1 then 
+    begin
       writeln (x);
-      writeln('Наибольший балл = ', y); end;
+      writeln('Наибольший балл = ', y); 
+    end;
 end.

@@ -31,7 +31,7 @@ for i:=1 to N do
     end;
     res:=max*max_2;
     if max*max3 > res then res:=max*max3;
-    if max*max5 > res then res:=max5*max5;
+    if max*max5 > res then res:=max*max5;
     if max5*max5_2 > res then res:=max5*max5_2;
     if max3*max3_2 > res then res:=max3*max3_2;
     writeln(res);
